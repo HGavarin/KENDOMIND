@@ -66,87 +66,6 @@ li {
     display: none;
 }
 
-#opening-animation {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: var(--color1);
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    transition: opacity 2.5s 1s ease-in;
-}
-
-/* OPENING ANIMATION ---------------------------------- */
-
-#drop {
-    width: 40rem;
-    height: 40rem;
-    background-color: var(--color2);
-    border-radius: 100rem;
-    animation: drop 3s 1 ease-in-out;
-}
-
-#ripple1 {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-radius: 100rem;
-    background-color: var(--color1);
-    animation: ripples 1.5s 1.6s 1 ease-in-out;
-}
-
-#ripple2 {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-radius: 100rem;
-    background-color: var(--color0);
-    animation: ripples 1.5s 1.7s 1 ease-in-out;
-}
-
-#ripple3 {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-radius: 100rem;
-    z-index: 100;
-    background-color: rgba(255, 255, 255, 0);
-    animation: ripples 1.5s 1.8s 1 ease-in-out;
-}
-
-@keyframes drop {
-    0% {
-        width: 40vw;
-        height: 40vw;
-    }
-
-    50% {
-        width: 0vw;
-        height: 0vw;
-    }
-
-    100% {
-        width: 150vw;
-        height: 150vw;
-    }
-}
-
-@keyframes ripples {
-    0% {
-        width: 0vw;
-        height: 0vw;
-    }
-
-    100% {
-        width: 150vw;
-        height: 150vw;
-    }
-}
-
 /*  MENU BURGER ---------------------------------- */
 
 .side-nav a {
@@ -194,7 +113,7 @@ li {
 /* HEADER ---------------------------------- */
 
 #titre-header {
-    background-image: url("/img/ecran-kendo2-1920x1080.jpg");
+    background-image: url("../img/ecran-kendo2-1920x1080.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1045,5 +964,8 @@ li {
 
     #contact-input-base-div {
         width: 80vw;
+    }
+    #opening-animation{
+        display: none;
     }
 }

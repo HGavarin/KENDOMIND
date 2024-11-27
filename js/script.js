@@ -9,7 +9,7 @@ var sliderImg = document.getElementById("slider-img")
 openBtn.onclick = openNav;
 closeBtn.onclick = closeNav;
 
-//ajoute une classe active au button pour ouvrir lr menu burger
+//ajoute une classe active au button pour ouvrir le menu burger
 function openNav() {
     sidenav.classList.add("active");
 }
@@ -19,20 +19,14 @@ function closeNav() {
     sidenav.classList.remove("active");
 }
 
-window.addEventListener("load", function () {
-    const loadingScreen = document.getElementById("opening-animation");
-    loadingScreen.style.opacity = "0";
-
-    setTimeout(function () {
-        loadingScreen.style.display = "none";
-    }, 2800);
-});
-
+//assigne une valeur a une variable
 let imageIndex = 1;
 
 function slider() {
     if (imageIndex === 1) {
-        sliderImg.src = "img/AdobeStock_199295625-scaled-e1675938972255 (1).jpeg";
+        //change la source de l'image
+        sliderImg.src = "img/AdobeStock_199295625-scaled-e16759389722552.jpeg";
+        //change la valeur de la variable
         imageIndex = 2;
     }
     else if (imageIndex === 2) {
@@ -49,4 +43,5 @@ function slider() {
     }
 }
 
+//assign une duree de chaque etape de la boucle 
 setInterval(slider, 4000);
